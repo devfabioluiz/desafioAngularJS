@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="app1">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <link rel="stylesheet" href="styles/style.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>          
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <script src="scripts/route-config.js"></script>
+            <script src="scripts/table.js"></script>
+            <script src="scripts/size.js"></script>
+            <script src="scripts/modal.js"></script>
+            <script src="scripts/print.js"></script>
+            <script src="scripts/pagination-table.js"></script>
+            <script src="scripts/menu-show.js"></script>
+            
+</head>   
+           
+        <body ng-app="myModule" onload="desaparecer()">
+            
+           <header>
+              <nav>
+              
+                  <button class="botao-fonte" onclick="tamanhofonte(1)">A<sup>+</sup>
+                  </button>
+                  <button class="botao-fonte" onclick="tamanhofonte(-1)">A<sup>-</sup>
+                  </button>   
+
+                  <br><br><br>
+                
+                    <div>
+                        
+                      <ul> 
+
+                         <li><a class="link" href="#" onclick="aparecer()">Simulado 1</a>
+                             
+                                <ul id="menu-lista">
+                                    <li><a href="#!simulado1">Prova Objetiva</a></li>
+                                    <li>Prova Prática</li>
+                                </ul>
+                            
+                         </li>
+                         
+                         <li><a class="link" href="#!simulado2" onclick="aparecer()">Simulado 2</a>
+                                                         
+                         </li>
+                         
+                         <li><a class="link" href="#!simulado3" onclick="aparecer()">Simulado 3</a>
+                                                         
+                         </li>
+                          
+                     </ul>    
+                            
+                    </div>
+ 
+                </nav>
+               
+           </header>
+            
+           <section>
+               
+               <div ng-view></div>
+               
+           </section> 
+            
+        </body>
+        </html>
